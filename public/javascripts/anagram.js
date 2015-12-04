@@ -11,7 +11,7 @@
  */
 
 function anagram(word) {
-    var anagrams = ["kiln","link","lead","deal","petals","staple"];
+    var anagrams = ["kiln", "link", "lead", "deal", "petals", "staple"];
     console.log("All anagrams are: \n" + anagrams.sort().join("\n"));
 
 
