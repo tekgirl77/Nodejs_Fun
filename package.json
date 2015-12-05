@@ -14,6 +14,7 @@
     "gulp": "^3.9.0",
     "jade": "~1.11.0",
     "less-middleware": "1.0.x",
+    "mocha": "^2.3.4",
     "mongodb": "^2.0.49",
     "mongoskin": "^2.0.3",
     "morgan": "~1.6.1",

@@ -1,6 +1,10 @@
 /**
  * Created by Salle on 12/3/15.
  */
+
+/*jslint node: true */
+"use strict";
+
 // In base -2, integers are represented by sequences of bits ordered from the
 // least to the most significant. The resulting base -2 integer from sequence A
 // of N bits is computed by: sum{ A[i]&(-2)^i for i = 0..N-1 }.
