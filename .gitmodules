@@ -1,0 +1,3 @@
+[submodule "public/scripts"]
+	path = public/scripts
+	url = git@github.com:tekgirl77/randomScripts.git
