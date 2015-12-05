@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Welcome to my #{title}
+  // p Welcome to #{title}
   div
     name Salle J. Ingle
     address Colorado Springs, CO
@@ -22,3 +22,19 @@ block content
       self-directed and self-managed, she is always pushing herself to deliver on-going
       process improvements. She is looking to make a difference with an enthusiastic
       team who enjoy what they do.
+
+  div
+    h2 Employment History
+
+  div
+    p(style='white-space:pre-wrap;')
+      | <strong>Security Innovation (Boston, MA) -- 100% Remote</strong>
+      | <strong>DevOps / Customer Success Engineer -- 2014-2015</strong>
+    p.
+      Responsible for handling all eLearning client accounts in the Midwest, Mountain
+      and Pacific regions. Solely responsible for managing “Safelight” AWS
+      infrastructure and DevOps for approximately 30 Linux servers running Apache,
+      open source Moodle eLearning applications hosting SCORM compliant courseware,
+      and MySQL RDS databases
+
+

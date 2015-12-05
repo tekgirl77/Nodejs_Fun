@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.all('*', function(req,res) {
     res.render(
         'index', {
-            title: 'Welcome to my sandbox!'//' Salle\'s \{Slice\}!'
+            title: 'Sandbox'//' Salle\'s \{Slice\}!'
         }
     );
 });
