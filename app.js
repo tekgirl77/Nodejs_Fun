@@ -14,7 +14,6 @@ var debug = require('debug')('NodeJS_Fun:server');
 var app = express();
 
 //Create Constructor here.
-// 'use strict';
 
 // set port via env variable or static
 app.set('port', process.env.PORT || 3000);
@@ -29,31 +28,29 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-//app.use(require('less-middleware')(path.join(__dirname, '/public')));
-debug("LESS path is: " + path.join(__dirname, '/less'));
-debug("CSS path is: " + path.join(__dirname, 'public'));
 app.use(lessMiddleware(path.join(__dirname, '/less'), {
     dest: path.join(__dirname, 'public'),
     force: true
     //debug: true
 }));
-//app.use(express.static(__dirname + "/public"));
-
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.all('*', function(req,res) {
-    res.render(
-        'index', {
-            title: 'Sandbox'//' Salle\'s \{Slice\}!'
-        }
-    );
+//Set up routes
+//app.use('/', routes);
+//app.use('/users', users);
+
+app.get('/', function(req, res, next) {
+    res.render('index', {title: 'Sandbox'
+    });
 });
-app.use('/', routes);
-app.use('/users', users);
+app.get('/about', function (req, res, next) {
+    res.render('about', {title: 'A Little About Me'
+    });
+});
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
+app.use(function (req, res, next) {
+    var err = new Error('Page not Found');
     err.status = 404;
     next(err);
 });
@@ -63,7 +60,7 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
+    app.use(function (err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {
             message: err.message,
@@ -81,6 +78,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;

@@ -23,7 +23,9 @@
   },
   "description": "NodeJS Sandbox",
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^3.4.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tekgirl77/Nodejs_Fun.git"
