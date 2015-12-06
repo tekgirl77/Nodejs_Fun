@@ -39,6 +39,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 //app.use('/', routes);
 //app.use('/users', users);
 
+
 app.get('/', function(req, res, next) {
     res.render('index', {title: 'Sandbox'
     });
