@@ -36,18 +36,8 @@ app.use(lessMiddleware(path.join(__dirname, '/less'), {
 app.use(express.static(path.join(__dirname, '/public')));
 
 //Set up routes
-//app.use('/', routes);
+app.use('/', routes);
 //app.use('/users', users);
-
-
-app.get('/', function(req, res, next) {
-    res.render('index', {title: 'Sandbox'
-    });
-});
-app.get('/about', function (req, res, next) {
-    res.render('about', {title: 'A Little About Me'
-    });
-});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
