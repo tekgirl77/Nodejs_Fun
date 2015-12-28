@@ -23,7 +23,7 @@ describe('contact page', function() {
 
     it('should show contact a form', function () {
         assert.ok(this.browser.success);
-        assert.equal(this.browser.text('h1'), 'Contact');
+        assert.equal(this.browser.text('h1'), 'Contact Me');
         assert.equal(this.browser.text('form label'), 'First NameLast NameEmailMessage');
     });
     it('should refuse empty submissions');
