@@ -3,8 +3,7 @@
  */
 
 "use strict";
-var mocha = require('mocha');
-var assert = mocha.assert;
+var assert = require('chai').assert;
 
 describe('Global Tests', function () {
     it('page has a valid title', function () {

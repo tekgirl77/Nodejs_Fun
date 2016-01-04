@@ -26,7 +26,14 @@ describe('contact page', function() {
         assert.equal(this.browser.text('h1'), 'Contact Me');
         assert.equal(this.browser.text('form label'), 'First NameLast NameEmailMessage');
     });
-    it('should refuse empty submissions');
-    // ...
 
+    // chaining promises
+    it('should refuse empty submissions', function (done) {
+        var browser = this.browser;
+        browser.pressButton('Send').then(function () {
+            assert.ok(browser.success);
+            assert.equal(browser.text('h1'), 'Contact');
+            assert.equal(browser.text('div.alert'), 'Please fill in all the fields');
+        }).then(done, done);
+    });
 });
